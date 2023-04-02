@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/link_background"
+    android:padding="3dp"
+    android:weightSum="90"
+    >
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/linkVideo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:src="@drawable/video" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkVideo"
+            android:gravity="center"
+            android:text="Video"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/linkImage"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:src="@drawable/image"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkImage"
+            android:gravity="center"
+            android:text="Image"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/linkDoc"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:padding="2dp"
+            android:src="@drawable/doc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linkDoc"
+            android:gravity="center"
+            android:text="Doc"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

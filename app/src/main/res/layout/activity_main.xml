@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+   >
+
+    <View
+        android:id="@+id/topBarMainActivity"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/topMainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainActivityBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/barColor"
+            android:layout_marginTop="0dp"
+
+            >
+            <TextView
+                android:id="@+id/appNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/menuMainActivity"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:padding="7dp"
+                android:src="@drawable/option"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_main_activity"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:padding="6dp"
+                android:src="@drawable/search_con"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/menuMainActivity"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="100"
+            android:background="@color/barColor"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:id="@+id/back_search"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/back"
+                />
+
+            <EditText
+                android:id="@+id/edt_search_users"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="100"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/edt_backgroung"
+                android:hint="Search"
+                android:paddingEnd="15dp"
+                android:paddingStart="10dp"
+                android:layout_marginEnd="5dp"/>
+
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/search_users"-->
+            <!--            android:layout_width="30dp"-->
+            <!--            android:layout_height="60dp"-->
+            <!--            android:layout_marginEnd="5dp"-->
+            <!--            android:padding="3dp"-->
+            <!--            android:src="@drawable/search_con"-->
+            <!--            />-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topMainActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/userlist_layout" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/purple" />
+
+    <ImageView
+        android:id="@+id/more_users"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/add_image1" />
+
+
+</RelativeLayout>

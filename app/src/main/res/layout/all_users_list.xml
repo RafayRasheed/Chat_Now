@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/topbarChat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all_users_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/barColor"
+            >
+            <ImageView
+                android:id="@+id/all_users_back_button"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:padding="7dp"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/appNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/all_users_back_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/search_all_user"
+                android:layout_width="30dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:src="@drawable/search_con"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_allUser_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/barColor"
+            android:visibility="invisible"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/back_search_allUser"
+                android:layout_width="38dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:padding="7dp"
+                android:src="@drawable/back" />
+
+            <EditText
+                android:id="@+id/edt_search_allUser"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="100"
+                android:background="@drawable/edt_backgroung"
+                android:hint="Search"
+                android:paddingStart="10dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true" />
+
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/search_users"-->
+            <!--            android:layout_width="30dp"-->
+            <!--            android:layout_height="60dp"-->
+            <!--            android:layout_marginEnd="5dp"-->
+            <!--            android:padding="3dp"-->
+            <!--            android:src="@drawable/search_con"-->
+            <!--            />-->
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/create_Group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbarChat"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/xyz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/group_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:padding="4dp"
+                android:src="@drawable/profile1"
+                app:civ_border_color="#A8A8A8"
+                app:civ_border_width="1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <EditText
+                    android:id="@+id/group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Group Name"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/group_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group_name"
+                    android:layout_marginStart="5dp"
+                    android:singleLine="true"
+                    android:text="Members: You"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/barColor" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/xyz"
+            android:background="#DCDBDB" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_users_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/create_Group"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/userlist_layout" />
+
+    <ImageView
+        android:id="@+id/share_msg_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/send" />
+
+</RelativeLayout>

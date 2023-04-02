@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_group">
+
+    <LinearLayout
+        android:id="@+id/GroupProfileActivityBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/barColor">
+
+        <ImageView
+
+            android:id="@+id/userProfileBackButtonGroup"
+            android:layout_width="35dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:gravity="center_vertical"
+            android:text="Group Information"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/GroupProfileActivityBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfileImageGroup"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="3dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="#D8D6D6"
+                app:civ_border_width="1dp" />
+
+            <ImageView
+                android:id="@+id/edtTxt_profileImageGroup"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:padding="2dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                app:srcCompat="@drawable/icon" />
+
+            <ProgressBar
+                android:id="@+id/loading1Group"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/userProfileImageGroup"
+                android:layout_alignBottom="@+id/userProfileImageGroup"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/Gray" />
+
+            <TextView
+                android:id="@+id/nameTxtGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userProfileImageGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:text="Abdul Rafay"
+                android:textColor="@color/barColor"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/edtTxt_name_Group"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/userProfileImageGroup"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="15dp"
+                android:padding="2dp"
+                app:srcCompat="@drawable/icon" />
+
+            <RelativeLayout
+                android:id="@+id/addGroupMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTxtGroup"
+                >
+
+                <View
+                    android:id="@+id/belowNameLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#DCDBDB" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/belowNameLine"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Add Members"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/addImage_group_members"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/belowNameLine"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    app:srcCompat="@drawable/add_member" />
+
+            </RelativeLayout>
+
+
+
+<!--            <View-->
+<!--                android:id="@+id/belowUsernameLine"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_below="@id/addMembers"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="#DCDBDB" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/emailHeading"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/belowUsernameLine"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:text="Email"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/emailTxt"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/belowUsernameLine"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_toEndOf="@+id/emailHeading"-->
+<!--                android:text="gmail.com"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18sp" />-->
+
+            <RelativeLayout
+                android:id="@+id/groupMembersText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addGroupMembers"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:id="@+id/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/two"
+                    android:background="#DCDBDB" />
+
+                <TextView
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Group Members"
+                    android:textColor="@color/barColor"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/two"
+                    android:background="#DCDBDB" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/all_users_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/groupMembersText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/userlist_layout" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

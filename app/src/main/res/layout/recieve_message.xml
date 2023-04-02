@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/receive_msgLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/receive_background"
+        android:maxWidth="300dp"
+        android:minWidth="100dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/sendBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rafay"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/barColor"
+            android:layout_marginStart="15dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           />
+
+
+        <RelativeLayout
+            android:id="@+id/receiver_image_video"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendBy">
+
+            <ImageView
+                android:id="@+id/receiveImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="200dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/capture" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/receiveMessageTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:text="Sender Message B Mercedes Benz is recalling almost one million vehicles worldwide, with almost 70,000 in Germany"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receiver_image_video" />
+
+        <TextView
+            android:id="@+id/receiveMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:text="12:20 am"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receiveMessageTxt" />
+
+        <TextView
+            android:id="@+id/receiveMessageForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:text="Forwarded"
+            android:textSize="11sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/receiveMessageTime"
+            app:layout_constraintTop_toBottomOf="@+id/receiveMessageTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:weightSum="100">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="78"-->
+<!--            >-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/receive_background"-->
+<!--                android:weightSum="15"-->
+
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:id="@+id/receiveMessageTxt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="15"-->
+<!--                    android:paddingLeft="10dp"-->
+<!--                    android:paddingTop="8dp"-->
+<!--                    android:paddingBottom="8dp"-->
+<!--                    android:text="Sender Message B Mercedes Benz is recalling almost one million vehicles worldwide, with almost 70,000 in Germany alone"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18sp" >-->
+
+
+
+<!--                </TextView>-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/receiveMessageTime"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginEnd="2dp"-->
+<!--                    android:gravity="bottom"-->
+<!--                    android:paddingBottom="5dp"-->
+<!--                    android:paddingEnd="5dp"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:text="12:20 am"-->
+<!--                    android:textSize="11dp" />-->
+
+<!--            </LinearLayout>-->
+
+
+
+
+<!--        </RelativeLayout>-->
+
+
+
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

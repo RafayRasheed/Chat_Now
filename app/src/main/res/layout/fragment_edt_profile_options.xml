@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="bottom|fill_horizontal"
+    >
+
+    <Button
+        android:id="@+id/FragProfBtnChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:text="Change" />
+
+    <Button
+        android:id="@+id/FragProfBtnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FragProfBtnChange"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:text="Remove" />
+
+    <Button
+        android:id="@+id/FragProfBtnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FragProfBtnRemove"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:text="Cancel"
+        android:layout_marginBottom="4dp"/>
+
+
+</RelativeLayout>

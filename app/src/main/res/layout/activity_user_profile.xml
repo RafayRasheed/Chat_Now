@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile"
+    android:background="@color/white">
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="1dp"
+        android:src="@drawable/profile2"
+        />
+        -->
+
+    <LinearLayout
+        android:id="@+id/ProfileActivityBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/barColor">
+
+        <ImageView
+
+            android:id="@+id/userProfileBackButton"
+            android:layout_width="35dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center_vertical"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/ProfileActivityBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfileImage"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="3dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="#D8D6D6"
+                app:civ_border_width="1dp" />
+
+            <ImageView
+                android:id="@+id/edtTxt_profileImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                app:srcCompat="@drawable/icon" />
+
+            <ProgressBar
+                android:id="@+id/loading1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/Gray" />
+
+            <View
+                android:id="@+id/belowProfileLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/userProfileImage"
+                android:layout_marginTop="15dp"
+                android:background="#DCDBDB" />
+
+            <TextView
+                android:id="@+id/nameHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belowProfileLine"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Name"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/nameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameHeading"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="2dp"
+                android:text="Abdul Rafay"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/edtTxt_name"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/belowProfileLine"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                app:srcCompat="@drawable/icon" />
+
+            <View
+                android:id="@+id/belowNameLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/nameTxt"
+                android:layout_marginTop="15dp"
+                android:background="#DCDBDB" />
+
+            <TextView
+                android:id="@+id/usernameHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belowNameLine"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Username"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/usernameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernameHeading"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="2dp"
+                android:text="rafay.123"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/edtTxt_username"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/belowNameLine"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                app:srcCompat="@drawable/icon" />
+
+            <View
+                android:id="@+id/belowUsernameLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/usernameTxt"
+                android:layout_marginTop="15dp"
+                android:background="#DCDBDB" />
+
+            <TextView
+                android:id="@+id/emailHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belowUsernameLine"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emailTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailHeading"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="2dp"
+                android:text="gmail.com"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+</RelativeLayout>

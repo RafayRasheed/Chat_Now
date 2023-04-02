@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chat Now</string>
+    <string name="profile_name">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="cancle">Cancel</string>
+    <string name="nameHint">Name</string>
+    <string name="user_idHint">User ID</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="sign_upButton">SIGN UP</string>
+
+</resources>

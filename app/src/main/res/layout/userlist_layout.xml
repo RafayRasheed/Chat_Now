@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:layout_marginTop="1dp" android:id="@+id/user_layout_full"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:padding="4dp"
+        android:src="@drawable/profile1"
+        app:civ_border_color="#A8A8A8"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:singleLine="true"
+        android:layout_toStartOf="@+id/timeLastMessage"
+        android:text="Rafay Rasheed"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_userID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@+id/unreadMsg"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/timeLastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:foregroundGravity="center_vertical"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:text=""
+        android:textColor="@color/barColor"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/unreadMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeLastMessage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/cricle"
+        android:foregroundGravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/online"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_alignEnd="@+id/profile_image"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/online" />
+
+    <TextView
+        android:id="@+id/adminTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/cricle"
+        android:foregroundGravity="center"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+
+
+
+
+
+    <!--
+      <ImageView
+        android:id="@+id/online"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:foregroundGravity="center_vertical"
+        android:src="@drawable/online" />
+    -->
+
+
+
+
+
+</RelativeLayout>
